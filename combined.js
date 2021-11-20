@@ -17,6 +17,8 @@ function init() {
         var firstSample = sampleNames[0];
         buildCharts(firstSample);
         buildMetadata(firstSample);
+        buildGauge(firstSample);
+        buildBubble(firstSample);
     });
 }
 
@@ -38,6 +40,8 @@ function optionChanged(newSample) {
     buildGauge(newSample);
 
 }
+
+
 // Demographics Panel 
 function buildMetadata(sample) {
     d3.json("samples.json").then((data) => {
